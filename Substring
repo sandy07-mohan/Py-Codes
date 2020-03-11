@@ -1,0 +1,14 @@
+#based on given input
+s=input()
+print(len(set(s)))
+
+#based on explanation
+s=input()
+res = [s[i: j] for i in range(len(s)) 
+          for j in range(i + 1, len(s) + 1)] 
+print(str(res))
+c=1
+for i in res:
+    if len(i)==c:
+        print(len(set(i)))
+        c+=1
